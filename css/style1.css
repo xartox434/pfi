@@ -1,0 +1,132 @@
+.grille{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.35fr 0.1fr 1fr 1fr 0.35fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "header header header header"
+    "main figure section2 figure2"
+    "section section section aside"
+    "footer footer footer footer"
+    ;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+nav{
+ grid-area: nav;
+ background-color: black;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: beige;
+    background-color: grey;
+}
+aside{
+    grid-area: aside;
+    padding-left: 5px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: grey;
+}
+section{
+    grid-area: section;
+}
+main{
+    grid-area: main;
+}
+
+html,body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+figure{
+    grid-area: figure;
+padding: 2px;
+width: fit-content;
+float: left;
+border: 2px solid black;
+max-height: 280px;
+max-width: 200px;
+}
+img{
+    height: 280px;
+    width: 200px;
+    margin: auto;
+    max-height: 340px;
+    max-width: 340px;
+   }
+
+   .section2{
+    grid-area: section2;
+
+   }
+
+   .figure2{
+    grid-area: figure2;
+    background-color: white;
+    width: fit-content;
+    float: right;
+    border: 2px solid black;
+    max-height: 280px;
+    max-width: 320px;
+    img{
+     width: 320px;
+    }
+   }
+
+   a:hover{
+    color: blue;
+ }
+
+ a{
+    color: purple;
+    text-decoration: none;
+ }
+
+ @media screen and (max-width: 1200px) {
+    .grille {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grille {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "header"
+            "figure"
+            "main"
+            "section"
+            "section2"
+            "figure2"
+            "aside"
+            "footer";
+    }
+
+    img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    img{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    header {text-align: center;}
+}
