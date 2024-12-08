@@ -1,0 +1,213 @@
+.grille{
+    background-color: orangered;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.35fr 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.35fr;
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "section1 section1 figure1"
+    "section2 section2 figure2"
+    "section3 section3 figure3"
+    "section4 section4 figure4"
+    "section5 section5 figure5"
+    "section6 section6 figure6"
+    "section7 section7 figure7"
+    "section8 section8 figure8"
+    "section9 section9 figure9"
+    "section10 section10 figure10"
+    "section11 section11 figure11"
+    "section12 section12 figure12"
+    "footer footer footer"
+    ;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+nav{
+ grid-area: nav;
+ background-color: black;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+html,body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+a:hover{
+    color: blue;
+ }
+
+ a{
+    color: purple;
+    text-decoration: none;
+ }
+
+ .navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    color: white;
+}
+
+.gauche, .millieux, .droit {
+    flex: 1; 
+    text-align: center; 
+}
+.millieux{
+    margin-right: 60px;
+}
+.gauche {
+    text-align: left; 
+    flex: 0;
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.droit {
+    text-align: right; 
+    flex: 0; 
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: grey;
+}
+
+
+.f1{
+ grid-area: figure1;
+}
+
+.s1{
+grid-area: section1;
+}
+.f2{
+    grid-area: figure2;
+}
+   
+   .s2{
+   grid-area: section2;
+   }
+   .f3{
+    grid-area: figure3;
+   }
+   
+   .s3{
+   grid-area: section3;
+   }
+   .f4{
+    grid-area: figure4;
+   }
+   
+   .s4{
+   grid-area: section4;
+   }
+
+   .f5{
+    grid-area: figure5;
+   }
+   
+   .s5{
+   grid-area: section5;
+   }
+
+   .f6{
+    grid-area: figure6;
+   }
+   
+   .s6{
+   grid-area: section6;
+   }
+
+   .f7{
+    grid-area: figure7;
+   }
+   
+   .s7{
+   grid-area: section7;
+   }
+
+   .f8{
+    grid-area: figure8;
+   }
+   
+   .s8{
+   grid-area: section8;
+   }
+
+   .f9{
+    grid-area: figure9;
+   }
+   
+   .s9{
+   grid-area: section9;
+   }
+
+   .f10{
+    grid-area: figure10;
+   }
+   
+   .s10{
+   grid-area: section10;
+   }
+
+
+   .f11{
+    grid-area: figure11;
+   }
+   
+   .s11{
+   grid-area: section11;
+   }
+
+   .f12{
+    grid-area: figure12;
+   }
+   
+   .s12{
+   grid-area: section12;
+   }
+
+   header{
+    text-align: center;
+    grid-area: header;
+   }
+
+   figure{
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    }
+
+    section{
+        display: flex;
+        border: 1px solid black;
+        text-align: center;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    img{
+        max-height: 200px;
+        max-width: 200px;
+        margin: auto;
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+       }

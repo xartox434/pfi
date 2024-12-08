@@ -1,0 +1,160 @@
+.grille{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.35fr 0.1fr 1fr 1fr 1fr 1fr 1fr 0.35fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "header header header header"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer"
+    ;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+nav{
+ grid-area: nav;
+ background-color: black;
+padding-left: 10px;
+padding-right: 10px;
+ 
+}
+footer{
+    grid-area: footer;
+    background-color: grey;
+}
+
+html,body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+a:hover{
+    color: blue;
+ }
+
+ a{
+    color: purple;
+    text-decoration: none;
+ }
+
+ .navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    color: white;
+}
+
+.gauche, .millieux, .droit {
+    flex: 1; 
+    text-align: center; 
+}
+
+.millieux{
+    margin-right: 60px;
+}
+.gauche {
+    text-align: left; 
+    flex: 0;
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.droit {
+    text-align: right; 
+    flex: 0; 
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+main{
+    grid-area: main;
+}
+
+header{
+    grid-area: header;
+}
+
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: orangered;
+    color: white;
+}
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .grille {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grille {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "footer";
+    }
+
+
+    footer {
+        text-align: center;
+    }
+
+    header {text-align: center;}
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+}

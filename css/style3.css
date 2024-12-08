@@ -1,0 +1,170 @@
+.grille{
+    background-color: orangered;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 0.35fr 1fr 1fr 1fr 1fr 0.35fr;
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "figure1 figure2 figure3 "
+    "figure4 figure5 figure6 "
+    "figure7 figure8 figure9 "
+    "footer footer footer "
+    ;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+#f1{
+    grid-area: figure1;
+   }
+   #f2{
+    grid-area: figure2;
+   }
+   #f3{
+    grid-area: figure3;
+   }
+   #f4{
+    grid-area: figure4;
+   }
+   #f5{
+    grid-area: figure5;
+   }
+   #f6{
+    grid-area: figure6;
+   }
+   #f7{
+    grid-area: figure7;
+   }
+   #f8{
+    grid-area: figure8;
+   }
+   #f9{
+    grid-area: figure9;   
+   }
+figure{
+margin: auto;
+padding-top: 25px;
+padding-bottom: 10px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    color: white;
+}
+
+.gauche, .millieux, .droit {
+    flex: 1; 
+    text-align: center; 
+}
+
+.millieux{
+ margin-right: 60px;
+}
+.gauche {
+    text-align: left; 
+    flex: 0;
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.droit {
+    text-align: right; 
+    flex: 0; 
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+nav{
+    grid-area: nav;
+    background-color: black;
+   padding-left: 10px;
+   padding-right: 10px;
+    
+   }
+   img{
+    max-height: 350px;
+    max-width: 350px;
+    margin: auto;
+    height: 350px;
+    width: 350px;
+    border: 1px solid black;
+   }
+   footer{
+    grid-area: footer;
+    background-color: grey;
+}
+
+header{
+    grid-area: header;
+}
+a:hover{
+    color: blue;
+ }
+
+ a{
+    color: purple;
+    text-decoration: none;
+ }
+
+ h3{
+    text-align: center;
+ }
+ @media screen and (max-width: 1200px) {
+    .grille {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grille {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "header"
+            "figure1"
+            "figure2"
+            "figure3"
+            "figure4"
+            "figure5"
+            "figure6"
+            "figure7"
+            "figure8"
+            "figure9"
+            "footer";
+    }
+
+    img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    img{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    header {text-align: center;}
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+}
