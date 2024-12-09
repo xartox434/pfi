@@ -1,4 +1,5 @@
 .grille{
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     grid-template-rows: 0.35fr 0.1fr 1fr 1fr 1fr 1fr 1fr 0.35fr;
@@ -106,14 +107,14 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: orangered;
+    background-color: black;
     color: white;
 }
 tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: white;
 }
 tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: orangered;
 }
 
 
@@ -157,4 +158,10 @@ tr:nth-child(even) {
     th, td {
         padding: 5px;
     }
+
+    .titre{
+        padding-left: 10px;
+    }
 }
+
+
