@@ -212,6 +212,6 @@ grid-area: section1;
         border: 1px solid black;
        }
 
-       .h6{
+       h6{
         display: none;
        }
