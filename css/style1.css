@@ -1,6 +1,6 @@
 .grille{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: repeat(4,1fr) ;
     grid-template-rows: 0.35fr 0.1fr 1fr 1fr 0.35fr;
     grid-template-areas:
     "nav nav nav nav"
@@ -37,6 +37,11 @@ aside{
 footer{
     grid-area: footer;
     background-color: grey;
+    text-align: right;
+    padding-top: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-right: 5px;
+    font-size: small;
 }
 section{
     grid-area: section;

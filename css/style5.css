@@ -28,6 +28,11 @@ padding-right: 10px;
 footer{
     grid-area: footer;
     background-color: grey;
+    text-align: right;
+    padding-top: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-right: 5px;
+    font-size: small;
 }
 
 html,body{

@@ -1,0 +1,291 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+;
+    color: black
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+.web{
+    background-color: red;
+    text-align: left;
+    padding: 10px;
+    color: black;
+    }
+   
+   
+   
+    .prog{
+   background-color: cyan;
+   text-align: left;
+   padding: 10px;
+   color: black;
+    }
+   
+    .francais{
+    background-color: blueviolet;
+    text-align: left;
+    padding: 10px;
+    color: black;
+    }
+   
+    .exploit{
+    background-color: chartreuse;    text-align: left;
+    padding: 10px;
+    color: black;
+    }
+   
+    .math{
+    background-color: darkblue;
+    text-align: left;
+    padding: 10px;
+    color: black;
+    }
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 150px repeat(5, 1fr); 
+    gap: 1px;
+    background-color: #ccc;
+    border: 1px solid #bbb;
+    grid-template-rows: repeat(12, auto);
+    font-size: 16px;
+}
+
+.schedule-grid > div {
+
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.header{
+    background-color: white;
+}
+
+
+
+.time-slot {
+    font-weight: bold;
+    background-color: white;
+
+}
+
+
+.course {
+    text-align: left;
+    padding: 10px;
+    color: black;
+    background-color: white;
+}
+
+.course strong {
+    font-weight: bold;
+    color: black;
+}
+
+.course em {
+    font-style: italic;
+    color: black;
+}
+
+.grille{
+    display: grid;
+    grid-template-columns: repeat(5,auto) ;
+    grid-template-rows: repeat(15,auto);
+    grid-template-areas:
+    "nav nav nav nav nav"
+    "header header header header header"
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "main main main main main "
+    "figure article article article article"
+    "figure2 article2 article2 article2 article2"
+    "footer footer footer footer footer"
+    ;
+    overflow: scroll;
+}
+
+nav{
+    grid-area: nav;
+    background-color: black;
+   padding-left: 10px;
+   padding-right: 10px;
+    
+   }
+
+   footer{
+    grid-area: footer;
+    background-color: grey;
+    text-align: right;
+    padding-top: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-right: 5px;
+    font-size: small;
+}
+main{
+    grid-area: main;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    color: white;
+}
+
+.gauche, .millieux, .droit {
+    flex: 1; 
+    text-align: center; 
+}
+
+.millieux{
+    margin-right: 60px;
+}
+.gauche {
+    text-align: left; 
+    flex: 0;
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.droit {
+    text-align: right; 
+    flex: 0; 
+    flex-wrap: nowrap;
+    gap: 15px;
+    white-space: nowrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+header{
+
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        grid-area: header;
+    
+}
+a:hover{
+    color: blue;
+ }
+
+ a{
+    color: purple;
+    text-decoration: none;
+ }
+
+
+ 
+
+
+ article{
+ grid-area: article;
+ border: 1px solid black;
+ padding-bottom: 10px;
+padding-left: 10px;
+padding-top: 10px;
+margin: auto;
+ }
+
+
+ .duno2{
+    padding-top: 10px;
+grid-area: article2;
+border: 1px solid black;
+padding-bottom: 10px;
+padding-left: 10px;
+ }
+
+ .uno{
+ grid-area: figure;
+ }
+
+ .duno{
+ grid-area: figure2;
+ 
+ }
+
+ img{
+    max-height: 350px;
+    max-width: 350px;
+    margin: auto;
+    height: 350px;
+    width: 350px;
+    border: 1px solid black;
+   }
+
+   @media screen and (max-width: 1200px) {
+    .grille {
+        grid-template-columns: 1fr 1fr;
+    }
+    .schedule-grid{
+    grid-column: 1fr 1fr;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    .grille {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;  
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "figure"
+            "article"
+            "figure2"
+            "article2"
+            "footer";
+        overflow: visible;
+    }
+
+    
+    .grille > div {
+        margin-bottom: 10px; 
+    }
+
+    
+    .schedule-grid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+    }
+
+    .schedule-grid > div {
+        text-align: left;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    
+    .schedule-grid > div:not(.time-slot) {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
