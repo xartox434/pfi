@@ -57,14 +57,18 @@ html,body{
     font-size: 20px;
 }
 
-figure{
+.figure1{
     grid-area: figure;
 padding: 2px;
 width: fit-content;
 float: left;
-border: 2px solid black;
+
 max-height: 280px;
 max-width: 200px;
+}
+
+.figure1 img {
+    border-radius: 50%;
 }
 img{
     height: 280px;
@@ -86,11 +90,12 @@ img{
     float: right;
     max-height: 280px;
     max-width: 320px;
-    border: 2px solid black;
-    img{
-     width: 320px;
-    }
+ border: 2px solid black;
    }
+
+   .figure2 img {
+    width: 320px;
+}
 
    a:hover{
     color: blue;
